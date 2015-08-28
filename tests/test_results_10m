@@ -1,0 +1,176 @@
+---------------------------------------------------------------------------
+FixedDeque stability test pack
+---------------------------------------------------------------------------
+Push/pop functions (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Resize function (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Insert one element function (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Insert elements by forward iterator function (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Insert elements by random iterator function (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Erase one element function (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Erase a number of elements function (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Iterators (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+IgushArray stability test pack
+---------------------------------------------------------------------------
+Size costructor (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Forward iterator costructor (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Random iterator costructor (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Assignment operator (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Resize function (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Reserve function (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Assign one value function (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Assign forward iterator function (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Assign random iterator function (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Push/pop functions (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Insert one element function (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Insert a number of elements function (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Insert elements by forward iterator function (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Insert elements by random iterator function (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Erase one element function (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Erase a number of elements function (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+Iterators (count is 50)
+..................................................OK
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+IgushArray performance test pack
+---------------------------------------------------------------------------
+Accessing elements by number
+Size: 1000      IgushArray: 80        vector: 10        Worse:    8         OK
+Size: 10000     IgushArray: 840       vector: 110       Worse:    7.6       OK
+Size: 100000    IgushArray: 8220      vector: 1130      Worse:    7.3       OK
+Size: 1000000   IgushArray: 89340     vector: 15720     Worse:    5.7       OK
+Size: 10000000  IgushArray: 903520    vector: 130200    Worse:    6.9       OK
+---------------------------------------------------------------------------
+Accessing elements by iterator
+Size: 1000      IgushArray: 170       vector: 40        Worse:    4.2       OK
+Size: 10000     IgushArray: 1700      vector: 340       Worse:    5         OK
+Size: 100000    IgushArray: 16910     vector: 3420      Worse:    4.9       OK
+Size: 1000000   IgushArray: 167600    vector: 34310     Worse:    4.9       OK
+Size: 10000000  IgushArray: 1686220   vector: 343090    Worse:    4.9       OK
+---------------------------------------------------------------------------
+Inserting one element int the middle
+Size: 1000      IgushArray: 10        vector: 10        Same time           OK
+Size: 10000     IgushArray: 10        vector: 30        Better:   3         OK
+Size: 100000    IgushArray: 60        vector: 360       Better:   6         OK
+Size: 1000000   IgushArray: 80        vector: 3580      Better:   45        OK
+Size: 10000000  IgushArray: 550       vector: 36940     Better:   67        OK
+---------------------------------------------------------------------------
+Erasing one element from the middle
+Size: 1000      IgushArray: 10        vector: 10        Same time           OK
+Size: 10000     IgushArray: 40        vector: 10        Worse:    4         OK
+Size: 100000    IgushArray: 60        vector: 300       Better:   5         OK
+Size: 1000000   IgushArray: 200       vector: 3270      Better:   16        OK
+Size: 10000000  IgushArray: 590       vector: 31310     Better:   53        OK
+---------------------------------------------------------------------------
+Inserting a number of elements at the middle
+Size: 1000      Count: 1         IgushArray: 20        vector: 0         Worse:    Infinity  OK
+Size: 1000      Count: 10        IgushArray: 40        vector: 0         Worse:    Infinity  OK
+Size: 1000      Count: 100       IgushArray: 50        vector: 10        Worse:    5         OK
+Size: 1000      Count: 1000      IgushArray: 70        vector: 30        Worse:    2.3       OK
+Size: 10000     Count: 1         IgushArray: 10        vector: 30        Better:   3         OK
+Size: 10000     Count: 10        IgushArray: 90        vector: 10        Worse:    9         OK
+Size: 10000     Count: 100       IgushArray: 30        vector: 30        Same time           OK
+Size: 10000     Count: 1000      IgushArray: 120       vector: 80        Worse:    1.5       OK
+Size: 10000     Count: 10000     IgushArray: 880       vector: 350       Worse:    2.5       OK
+Size: 100000    Count: 1         IgushArray: 60        vector: 390       Better:   6.5       OK
+Size: 100000    Count: 10        IgushArray: 460       vector: 370       Worse:    1.2       OK
+Size: 100000    Count: 100       IgushArray: 3900      vector: 350       Worse:    11        OK
+Size: 100000    Count: 1000      IgushArray: 2120      vector: 350       Worse:    6.1       OK
+Size: 100000    Count: 10000     IgushArray: 7850      vector: 590       Worse:    13        OK
+Size: 100000    Count: 100000    IgushArray: 7770      vector: 3590      Worse:    2.2       OK
+Size: 1000000   Count: 1         IgushArray: 180       vector: 3750      Better:   21        OK
+Size: 1000000   Count: 10        IgushArray: 1280      vector: 3730      Better:   2.9       OK
+Size: 1000000   Count: 100       IgushArray: 12220     vector: 3720      Worse:    3.3       OK
+Size: 1000000   Count: 1000      IgushArray: 270       vector: 3670      Better:   14        OK
+Size: 1000000   Count: 10000     IgushArray: 1050      vector: 3890      Better:   3.7       OK
+Size: 1000000   Count: 100000    IgushArray: 7950      vector: 5420      Worse:    1.5       OK
+Size: 1000000   Count: 1000000   IgushArray: 76690     vector: 35800     Worse:    2.1       OK
+Size: 10000000  Count: 1         IgushArray: 830       vector: 36800     Better:   44        OK
+Size: 10000000  Count: 10        IgushArray: 4310      vector: 36770     Better:   8.5       OK
+Size: 10000000  Count: 100       IgushArray: 38770     vector: 36730     Worse:    1.1       OK
+Size: 10000000  Count: 1000      IgushArray: 383510    vector: 36840     Worse:    10        OK
+Size: 10000000  Count: 10000     IgushArray: 198070    vector: 37050     Worse:    5.3       OK
+Size: 10000000  Count: 100000    IgushArray: 755770    vector: 39390     Worse:    19        OK
+Size: 10000000  Count: 1000000   IgushArray: 359630    vector: 62590     Worse:    5.7       OK
+Size: 10000000  Count: 10000000  IgushArray: 765220    vector: 362660    Worse:    2.1       OK
+---------------------------------------------------------------------------
+Erasing a number of elements from the middle
+Size: 1000      Count: 1         IgushArray: 30        vector: 0         Worse:    Infinity  OK
+Size: 1000      Count: 10        IgushArray: 60        vector: 0         Worse:    Infinity  OK
+Size: 1000      Count: 100       IgushArray: 20        vector: 0         Worse:    Infinity  OK
+Size: 1000      Count: 1000      IgushArray: 10        vector: 10        Same time           OK
+Size: 10000     Count: 1         IgushArray: 50        vector: 0         Worse:    Infinity  OK
+Size: 10000     Count: 10        IgushArray: 250       vector: 30        Worse:    8.3       OK
+Size: 10000     Count: 100       IgushArray: 60        vector: 70        Better:   1.2       OK
+Size: 10000     Count: 1000      IgushArray: 30        vector: 40        Better:   1.3       OK
+Size: 10000     Count: 10000     IgushArray: 120       vector: 120       Same time           OK
+Size: 100000    Count: 1         IgushArray: 140       vector: 290       Better:   2.1       OK
+Size: 100000    Count: 10        IgushArray: 400       vector: 350       Worse:    1.1       OK
+Size: 100000    Count: 100       IgushArray: 3310      vector: 310       Worse:    11        OK
+Size: 100000    Count: 1000      IgushArray: 1780      vector: 300       Worse:    5.9       OK
+Size: 100000    Count: 10000     IgushArray: 6140      vector: 400       Worse:    15        OK
+Size: 100000    Count: 100000    IgushArray: 1130      vector: 990       Worse:    1.1       OK
+Size: 1000000   Count: 1         IgushArray: 400       vector: 3150      Better:   7.9       OK
+Size: 1000000   Count: 10        IgushArray: 1630      vector: 2970      Better:   1.8       OK
+Size: 1000000   Count: 100       IgushArray: 10720     vector: 3230      Worse:    3.3       OK
+Size: 1000000   Count: 1000      IgushArray: 360       vector: 3170      Better:   8.8       OK
+Size: 1000000   Count: 10000     IgushArray: 170       vector: 3160      Better:   19        OK
+Size: 1000000   Count: 100000    IgushArray: 1070      vector: 4010      Better:   3.7       OK
+Size: 1000000   Count: 1000000   IgushArray: 10480     vector: 10070     Worse:    1         OK
+Size: 10000000  Count: 1         IgushArray: 1400      vector: 31470     Better:   22        OK
+Size: 10000000  Count: 10        IgushArray: 4360      vector: 31290     Better:   7.2       OK
+Size: 10000000  Count: 100       IgushArray: 33190     vector: 31410     Worse:    1.1       OK
+Size: 10000000  Count: 1000      IgushArray: 322670    vector: 31280     Worse:    10        OK
+Size: 10000000  Count: 10000     IgushArray: 166430    vector: 31640     Worse:    5.3       OK
+Size: 10000000  Count: 100000    IgushArray: 632400    vector: 32590     Worse:    19        OK
+Size: 10000000  Count: 1000000   IgushArray: 245190    vector: 38850     Worse:    6.3       OK
+Size: 10000000  Count: 10000000  IgushArray: 100920    vector: 100120    Worse:    1         OK
+---------------------------------------------------------------------------
