@@ -1,5 +1,3 @@
-[TOC]
-
 # Introduction
 
 There are two basic data structures: array and list. Array is a random
