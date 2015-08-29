@@ -216,7 +216,7 @@ Performance test pack compares the results of main IgushArray functions
 (access, insert/erase) performance with std::vector performance. Main
 dependences can be seen using this pack (see below).
 
-## Download. Warranty and license
+## Warranty and license
 
 The implementation is provided “as it is” with no warranty. Any private
 and commercial usage is allowed. Keeping the original name and link to
