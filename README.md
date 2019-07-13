@@ -1,3 +1,5 @@
+# IgushArray - Array with Constant Access and Fast Insertion and Deletion
+
 # Introduction
 
 There are two basic data structures: array and list. Array is a random
