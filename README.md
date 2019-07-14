@@ -1,4 +1,4 @@
-# IgushArray - Array with Constant Access and Fast Insertion and Deletion
+# IgushArray - Array with Constant Time Access and Fast Insertion and Deletion
 
 # Introduction
 
