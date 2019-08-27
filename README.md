@@ -1,5 +1,29 @@
 # Array with Constant Time Access and Fast Insertion and Deletion
 
+Table of Contents
+=================
+
+   * [Table of Contents](#table-of-contents)
+   * [Introduction](#introduction)
+      * [Overview](#overview)
+      * [Motivation](#motivation)
+      * [Port to Other Languages](#port-to-other-languages)
+   * [Concepts](#concepts)
+      * [Structure](#structure)
+      * [Access](#access)
+      * [Insertion](#insertion)
+      * [Erasing](#erasing)
+      * [Generalization](#generalization)
+   * [Performance Tests](#performance-tests)
+      * [Access by Index](#access-by-index)
+      * [Access by Iterator](#access-by-iterator)
+      * [Insertion](#insertion-1)
+      * [Erasing](#erasing-1)
+   * [Implementation](#implementation)
+      * [Structure](#structure-1)
+      * [Limitations](#limitations)
+      * [Test Packs](#test-packs)
+
 # Introduction
 
 ## Overview
@@ -28,7 +52,7 @@ Motivation was the need for an array which can be kept sorted and one could
 quicky access k-th max element and at the same time quickly insert or delete
 an element.
 
-## Porting to Other Languages
+## Port to Other Languages
 
 * C# - [cser/IgushArray](https://github.com/cser/IgushArray)
 
@@ -115,39 +139,39 @@ operation would be O (k) where k is degree; the complexity of
 insert/erase operation would be O (N1/k). In simple case described in
 this paper k is 2.
 
-# Performance tests
+# Performance Tests
 
 The package performance test results can be seen below. The tests were
 done using computer with next configuration: Inter Core 2 Duo 1,83MHz,
 2GB, Ubuntu, GCC version 4.5.2. The results are in milliseconds. Every
 operation was performed 1000 times.
 
-## Access by index
+## Access by Index
 
 Below there are the results of calculating the sum of a structure.
 
 |Count       |IgushArray  |std::vector  |Result      |
 |-----------:|-----------:|------------:|-----------:|
-|1 000       |80          |10           |Slower: 8    |
-|10 000      |840         |110          |Slower: 7.6  |
-|100 000     |8220        |1130         |Slower: 7.3  |
-|1 000 000   |89340       |15720        |Slower: 5.7  |
-|10 000 000  |903520      |130200       |Slower: 6.9  |
+|1 000       |80          |10           |Slower: 8   |
+|10 000      |840         |110          |Slower: 7.6 |
+|100 000     |8220        |1130         |Slower: 7.3 |
+|1 000 000   |89340       |15720        |Slower: 5.7 |
+|10 000 000  |903520      |130200       |Slower: 6.9 |
 
 It can be seen that the time of sum grows linear as count of elements.
 It means that the both structures have constant-time access operation.
 
-## Access by iterator
+## Access by Iterator
 
 Below there are the results of calculating the sum of a structure.
 
-|Count       |IgushArray  |std::vector  |Result       |
-|-----------:|-----------:|------------:|------------:|
-|1 000       |170         |40           |Slower: 4.2  |
-|10 000      |1700        |340          |Slower: 5    |
-|100 000     |16910       |3420         |Slower: 4.9  |
-|1 000 000   |167600      |34310        |Slower: 4.9  |
-|10 000 000  |1686220     |343090       |Slower: 4.9  |
+|Count       |IgushArray  |std::vector  |Result      |
+|-----------:|-----------:|------------:|-----------:|
+|1 000       |170         |40           |Slower: 4.2 |
+|10 000      |1700        |340          |Slower: 5   |
+|100 000     |16910       |3420         |Slower: 4.9 |
+|1 000 000   |167600      |34310        |Slower: 4.9 |
+|10 000 000  |1686220     |343090       |Slower: 4.9 |
 
 It can be seen that the time of sum grows linear as the count of
 elements.
@@ -159,13 +183,13 @@ more complicated structure than array.
 
 Below there are results of inserting one element in the middle.
 
-|Count       |IgushArray  |std::vector  |Result      |
-|-----------:|-----------:|------------:|-----------:|
-|1 000       |10          |10           |Same time   |
-|10 000      |10          |30           |Faster: 3   |
-|100 000     |60          |360          |Faster: 6   |
-|1 000 000   |80          |3580         |Faster: 45  |
-|10 000 000  |550         |36940        |Faster: 67  |
+|Count       |IgushArray  |std::vector  |Result     |
+|-----------:|-----------:|------------:|----------:|
+|1 000       |10          |10           |Same time  |
+|10 000      |10          |30           |Faster: 3  |
+|100 000     |60          |360          |Faster: 6  |
+|1 000 000   |80          |3580         |Faster: 45 |
+|10 000 000  |550         |36940        |Faster: 67 |
 
 It can be seen that the time of std::vector insert operation grows
 linear as the count of elements, but the time of IgushArray insert
@@ -175,13 +199,13 @@ operation grows like N^1/2.
 
 Below there are results of erasing one element from the middle.
 
-|Count       |IgushArray  |std::vector  |Result      |
-|-----------:|-----------:|------------:|-----------:|
-|1 000       |10          |10           |Same time   |
-|10 000      |40          |10           |Slower: 4   |
-|100 000     |60          |300          |Faster: 5   |
-|1 000 000   |200         |3270         |Faster: 16  |
-|10 000 000  |590         |31310        |Faster: 53  |
+|Count       |IgushArray  |std::vector  |Result     |
+|-----------:|-----------:|------------:|----------:|
+|1 000       |10          |10           |Same time  |
+|10 000      |40          |10           |Slower: 4  |
+|100 000     |60          |300          |Faster: 5  |
+|1 000 000   |200         |3270         |Faster: 16 |
+|10 000 000  |590         |31310        |Faster: 53 |
 
 It can be seen that the time of std::vector erase operation grows linear
 as the count of elements, but the time of IgushArray erase operation
@@ -189,7 +213,7 @@ grows like N^1/2.
 
 # Implementation
 
-## The structure
+## Structure
 
 An implementation written in C++. **The IgushArray class totally implements
 std::vector interface**, so it would be very easy to replace std::vector in
@@ -219,7 +243,7 @@ IgushArray class totally provides iterator mechanism, but this mechanism
 does not guarantee an iterator consistence after modifying operations
 such as insert/erase, push back/pop back and so on.
 
-## Test packs
+## Test Packs
 
 The package has also two stability test packs and performance test pack.
 Stability test pack tests almost all IgushArray interface functions and
