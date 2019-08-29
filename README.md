@@ -6,7 +6,7 @@ Table of Contents
    * [Introduction](#introduction)
       * [Overview](#overview)
       * [Motivation](#motivation)
-      * [Port to Other Languages](#port-to-other-languages)
+      * [Implementations](#implementations)
    * [Concepts](#concepts)
       * [Structure](#structure)
       * [Access](#access)
@@ -22,6 +22,7 @@ Table of Contents
       * [Structure](#structure-1)
       * [Limitations](#limitations)
       * [Test Packs](#test-packs)
+      * [Port to Other Languages](#port-to-other-languages)
 
 # Introduction
 
@@ -51,9 +52,12 @@ Motivation was the need for an array which can be kept sorted and one could
 quicky access k-th max element and at the same time quickly insert or delete
 an element.
 
-## Port to Other Languages
+## Implementations
 
-* C# - [cser/IgushArray](https://github.com/cser/IgushArray)
+* This implementation written in C++. **The IgushArray class fully implements
+std::vector interface**, so it is very easy to replace std::vector in code;
+
+* C# - [cser/IgushArray](https://github.com/cser/IgushArray);
 
 # Concepts
 
@@ -214,9 +218,8 @@ grows like N^1/2.
 
 ## Structure
 
-An implementation written in C++. **The IgushArray class totally implements
-std::vector interface**, so it would be very easy to replace std::vector in
-code.
+This implementation written in C++. **The IgushArray class fully implements
+std::vector interface**, so it is very easy to replace std::vector in code.
 
 **It is highly recommended to know the approximate size of a future
 structure and transfer it to the constructor or immediately after
@@ -226,7 +229,7 @@ degenerate to linear.**
 
 The implementation also provides FixedDeque class. The class is a simple
 double-ended queue which uses only one array in its implementation and
-requires its size during creation (in constructor). It does not totally
+requires its size during creation (in constructor). It does not fully
 implements std::deque interface and provides only functions needed by
 IgushArray implementation.
 
@@ -238,7 +241,7 @@ std::vector cannot be replaced, because in IgushArray structure elements
 are not stored sequentially in memory. Also in these cases insert and
 erase time is not an issue.
 
-IgushArray class totally provides iterator mechanism, but this mechanism
+IgushArray class fully provides iterator mechanism, but this mechanism
 does not guarantee an iterator consistence after modifying operations
 such as insert/erase, push back/pop back and so on.
 
@@ -252,4 +255,8 @@ for FixedDeque.
 Performance test pack compares the results of main IgushArray functions
 (access, insert/erase) performance with std::vector performance. Main
 dependences can be seen using this pack (see below).
+
+## Port to Other Languages
+
+* C# - [cser/IgushArray](https://github.com/cser/IgushArray)
 
