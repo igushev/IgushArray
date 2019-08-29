@@ -49,7 +49,7 @@ structures can be seen in the table below.
 ## Motivation
 
 Motivation was the need for an array which can be kept sorted and one could
-quicky access k-th max element and at the same time quickly insert or delete
+quickly access k-th max element and at the same time quickly insert or delete
 an element.
 
 ## Implementations
