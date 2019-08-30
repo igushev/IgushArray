@@ -18,6 +18,7 @@
 
 class FixedDequeStabTestPack : public StabTestPack {
 public:
+    ~FixedDequeStabTestPack() {}
     FixedDequeStabTestPack(unsigned count):StabTestPack(count) {}
     void Pack();
 

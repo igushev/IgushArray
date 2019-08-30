@@ -16,6 +16,7 @@
 
 class TestPack {
 public:
+    virtual ~TestPack() {}
     void ExecuteTests();
 
 protected:

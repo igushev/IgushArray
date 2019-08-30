@@ -347,12 +347,12 @@ void FixedDequeStabTestPack::Iterators::Execute() const
             StabTestPack::check_consistency(fixed_deque_test, deque_baseline);
             num += push_front;
 
-            typename FixedDequeTest::iterator dt_it1 = fixed_deque_test.begin();
-            typename DequeBaseline::iterator db_it1 = deque_baseline.begin();
+            FixedDequeTest::iterator dt_it1 = fixed_deque_test.begin();
+            DequeBaseline::iterator db_it1 = deque_baseline.begin();
             while (dt_it1 != fixed_deque_test.end()) {
 
-                typename FixedDequeTest::iterator dt_it2 = fixed_deque_test.begin();
-                typename DequeBaseline::iterator db_it2 = deque_baseline.begin();
+                FixedDequeTest::iterator dt_it2 = fixed_deque_test.begin();
+                DequeBaseline::iterator db_it2 = deque_baseline.begin();
                 while (dt_it2 != fixed_deque_test.end()) {
 
                     if ((dt_it1 == dt_it2) ^ (db_it1 == db_it2))

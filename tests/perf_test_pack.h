@@ -17,6 +17,8 @@
 #include <time.h>
 
 class PerfTestPack : public TestPack {
+public:
+    ~PerfTestPack() {}
 protected:
     class Measure {
     public:

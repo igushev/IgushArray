@@ -17,6 +17,7 @@
 
 class StabTestPack : public TestPack {
 public:
+    ~StabTestPack() {}
     StabTestPack(unsigned count):_count(count) {}
 
 protected:

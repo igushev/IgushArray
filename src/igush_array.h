@@ -283,7 +283,7 @@ private:
  
 template <class T, class Alloc>
 template <class U, class IgushArrayPtr, class VecIter, class DeqIter>
-IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>&
+typename IgushArray<T, Alloc>::template IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>&
 IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>::operator+=(difference_type incr)
 {
     if (!incr)
@@ -311,7 +311,7 @@ IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>::op
 
 template <class T, class Alloc>
 template <class U, class IgushArrayPtr, class VecIter, class DeqIter>
-IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>
+typename IgushArray<T, Alloc>::template IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>
 IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>::operator+(difference_type incr) const
 {
     Self temp = *this;
@@ -321,7 +321,7 @@ IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>::op
 
 template <class T, class Alloc>
 template <class U, class IgushArrayPtr, class VecIter, class DeqIter>
-IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>&
+typename IgushArray<T, Alloc>::template IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>&
 IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>::operator-=(difference_type decr)
 {
     if (!decr)
@@ -349,7 +349,7 @@ IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>::op
 
 template <class T, class Alloc>
 template <class U, class IgushArrayPtr, class VecIter, class DeqIter>
-IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>
+typename IgushArray<T, Alloc>::template IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>
 IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>::operator-(difference_type decr) const
 {
     Self temp = *this;
@@ -359,7 +359,7 @@ IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>::op
 
 template <class T, class Alloc>
 template <class U, class IgushArrayPtr, class VecIter, class DeqIter>
-IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>&
+typename IgushArray<T, Alloc>::template IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>&
 IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>::operator++()
 {
     ++_deq_it;
@@ -372,7 +372,7 @@ IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>::op
 
 template <class T, class Alloc>
 template <class U, class IgushArrayPtr, class VecIter, class DeqIter>
-IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>
+typename IgushArray<T, Alloc>::template IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>
 IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>::operator++(int)
 {
     Self temp = *this;
@@ -382,7 +382,7 @@ IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>::op
 
 template <class T, class Alloc>
 template <class U, class IgushArrayPtr, class VecIter, class DeqIter>
-IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>&
+typename IgushArray<T, Alloc>::template IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>&
 IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>::operator--()
 {
     if (_deq_it == (*_vec_it)->begin() && _vec_it != _ia->_v->begin()) {
@@ -396,7 +396,7 @@ IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>::op
 
 template <class T, class Alloc>
 template <class U, class IgushArrayPtr, class VecIter, class DeqIter>
-IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>
+typename IgushArray<T, Alloc>::template IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>
 IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>::operator--(int)
 {
     Self temp = *this;
@@ -406,7 +406,8 @@ IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>::op
 
 template <class T, class Alloc>
 template <class U, class IgushArrayPtr, class VecIter, class DeqIter>
-typename IgushArray<T, Alloc>::template IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>::difference_type IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>::operator-(const Self& iai) const
+typename IgushArray<T, Alloc>::template IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>::difference_type
+IgushArray<T, Alloc>::IgushArrayIterator<U, IgushArrayPtr, VecIter, DeqIter>::operator-(const Self& iai) const
 {
     if (*this < iai)
         return -(iai - *this);

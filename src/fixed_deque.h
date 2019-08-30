@@ -188,7 +188,7 @@ private:
  
 template <class T, class Alloc>
 template <class U, class FixedDequePtr>
-FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>&
+typename FixedDeque<T, Alloc>::template FixedDequeIterator<U, FixedDequePtr>&
 FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>::operator+=(difference_type incr)
 {
     _u += incr;
@@ -199,7 +199,7 @@ FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>::operator+=(differenc
 
 template <class T, class Alloc>
 template <class U, class FixedDequePtr>
-FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>
+typename FixedDeque<T, Alloc>::template FixedDequeIterator<U, FixedDequePtr>
 FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>::operator+(difference_type incr) const
 {
     Self temp = *this;
@@ -209,7 +209,7 @@ FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>::operator+(difference
 
 template <class T, class Alloc>
 template <class U, class FixedDequePtr>
-FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>&
+typename FixedDeque<T, Alloc>::template FixedDequeIterator<U, FixedDequePtr>&
 FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>::operator-=(difference_type decr)
 {
     _u -= decr;
@@ -220,7 +220,7 @@ FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>::operator-=(differenc
 
 template <class T, class Alloc>
 template <class U, class FixedDequePtr>
-FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>
+typename FixedDeque<T, Alloc>::template FixedDequeIterator<U, FixedDequePtr>
 FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>::operator-(difference_type decr) const
 {
     Self temp = *this;
@@ -230,7 +230,7 @@ FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>::operator-(difference
 
 template <class T, class Alloc>
 template <class U, class FixedDequePtr>
-FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>&
+typename FixedDeque<T, Alloc>::template FixedDequeIterator<U, FixedDequePtr>&
 FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>::operator++()
 {
     ++_u;
@@ -241,7 +241,7 @@ FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>::operator++()
 
 template <class T, class Alloc>
 template <class U, class FixedDequePtr>
-FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>
+typename FixedDeque<T, Alloc>::template FixedDequeIterator<U, FixedDequePtr>
 FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>::operator++(int)
 {
     Self temp = *this;
@@ -251,7 +251,7 @@ FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>::operator++(int)
 
 template <class T, class Alloc>
 template <class U, class FixedDequePtr>
-FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>&
+typename FixedDeque<T, Alloc>::template FixedDequeIterator<U, FixedDequePtr>&
 FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>::operator--()
 {
     --_u;
@@ -262,7 +262,7 @@ FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>::operator--()
 
 template <class T, class Alloc>
 template <class U, class FixedDequePtr>
-FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>
+typename FixedDeque<T, Alloc>::template FixedDequeIterator<U, FixedDequePtr>
 FixedDeque<T, Alloc>::FixedDequeIterator<U, FixedDequePtr>::operator--(int)
 {
     Self temp = *this;

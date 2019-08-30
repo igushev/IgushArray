@@ -15,12 +15,6 @@
 #include <iterator>
 
 template <class InputIterator>
-size_t data_size(InputIterator first, InputIterator last)
-{
-    return size_helper(first, last, typename std::iterator_traits<InputIterator>::iterator_category());
-}
-
-template <class InputIterator>
 size_t size_helper(InputIterator first, InputIterator last, std::random_access_iterator_tag)
 {
     return last - first;
@@ -34,6 +28,12 @@ size_t size_helper(InputIterator first, InputIterator last, std::input_iterator_
         ++n;
     }
     return n;
+}
+
+template <class InputIterator>
+size_t data_size(InputIterator first, InputIterator last)
+{
+    return size_helper(first, last, typename std::iterator_traits<InputIterator>::iterator_category());
 }
 
 #endif

@@ -12,14 +12,13 @@
 #include "fixed_deque_stab.h"
 #include "igush_array_stab.h"
 #include "igush_array_perf.h"
-#include <auto_ptr.h>
 
 int main(int argc, char** args)
 {
-    std::auto_ptr<FixedDequeStabTestPack> fixed_deque_stab_test_pack(new FixedDequeStabTestPack(50));
+    std::unique_ptr<FixedDequeStabTestPack> fixed_deque_stab_test_pack(new FixedDequeStabTestPack(50));
     fixed_deque_stab_test_pack->ExecuteTests();
-    std::auto_ptr<IgushArrayStabTestPack> igush_array_stab_test_pack(new IgushArrayStabTestPack(50));
+    std::unique_ptr<IgushArrayStabTestPack> igush_array_stab_test_pack(new IgushArrayStabTestPack(50));
     igush_array_stab_test_pack->ExecuteTests();
-    std::auto_ptr<IgushArrayPerfTestPack> igush_array_perf_test_pack(new IgushArrayPerfTestPack(1000, 10, 10000000));
+    std::unique_ptr<IgushArrayPerfTestPack> igush_array_perf_test_pack(new IgushArrayPerfTestPack(1000, 10, 10000000));
     igush_array_perf_test_pack->ExecuteTests();
 }
