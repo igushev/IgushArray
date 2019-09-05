@@ -59,6 +59,11 @@ std::vector interface**, so it is very easy to replace std::vector in code;
 
 * C# - [cser/IgushArray](https://github.com/cser/IgushArray);
 
+* This implementation is written in Java. **The IgushArray class intends to fully implement the same interfaces as 
+the Java ArrayList**, and is a one for one replacement for ArrayLists in code.
+
+* Java - [StoneT2000/IgushArray-Java](https://github.com/StoneT2000/IgushArray-Java)
+
 # Concepts
 
 ## Structure
@@ -259,4 +264,5 @@ dependences can be seen using this pack (see below).
 ## Port to Other Languages
 
 * C# - [cser/IgushArray](https://github.com/cser/IgushArray)
+* Java - [StoneT2000/IgushArray-Java](https://github.com/StoneT2000/IgushArray-Java)
 
