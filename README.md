@@ -59,10 +59,7 @@ std::vector interface**, so it is very easy to replace std::vector in code;
 
 * C# - [cser/IgushArray](https://github.com/cser/IgushArray);
 
-* This implementation is written in Java. **The IgushArray class intends to fully implement the same interfaces as 
-the Java ArrayList**, and is a one for one replacement for ArrayLists in code.
-
-* Java - [StoneT2000/IgushArray-Java](https://github.com/StoneT2000/IgushArray-Java)
+* Java - [StoneT2000/IgushArray-Java](https://github.com/StoneT2000/IgushArray-Java): The IgushArray class **fully implements the List interface** with the time complexities of ArrayList, but with faster insertion and deletion in O(N^1/2) time.
 
 # Concepts
 
