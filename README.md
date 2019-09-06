@@ -59,7 +59,7 @@ std::vector interface**, so it is very easy to replace std::vector in code;
 
 * C# - [cser/IgushArray](https://github.com/cser/IgushArray);
 
-* Java - [StoneT2000/IgushArray-Java](https://github.com/StoneT2000/IgushArray-Java): The IgushArray class **fully implements the List interface** with the time complexities of ArrayList, but with faster insertion and deletion in O(N^1/2) time.
+* Java - [StoneT2000/IgushArray-Java](https://github.com/StoneT2000/IgushArray-Java). **The IgushArray class fully implements the `List` interface** with the time complexities of `ArrayList`, but with faster insertion and deletion in O(N^1/2) time;
 
 # Concepts
 
@@ -260,6 +260,6 @@ dependences can be seen using this pack (see below).
 
 ## Port to Other Languages
 
-* C# - [cser/IgushArray](https://github.com/cser/IgushArray)
-* Java - [StoneT2000/IgushArray-Java](https://github.com/StoneT2000/IgushArray-Java)
+* C# - [cser/IgushArray](https://github.com/cser/IgushArray);
+* Java - [StoneT2000/IgushArray-Java](https://github.com/StoneT2000/IgushArray-Java);
 
