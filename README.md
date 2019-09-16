@@ -61,6 +61,8 @@ std::vector interface**, so it is very easy to replace std::vector in code;
 
 * Java - [StoneT2000/IgushArray-Java](https://github.com/StoneT2000/IgushArray-Java). **The IgushArray class fully implements the `List` interface** with the time complexities of `ArrayList`, but with faster insertion and deletion in O(N^1/2) time;
 
+* Javascript - [StoneT2000/IgushArray-JS](https://github.com/StoneT2000/IgushArray-JS). **The IgushArray is a one for one replacement for javascript's built in arrays** with the time complexities of a normal JS array, but with faster insertion and deletion in O(N^1/2) time;
+
 # Concepts
 
 ## Structure
@@ -262,4 +264,4 @@ dependences can be seen using this pack (see below).
 
 * C# - [cser/IgushArray](https://github.com/cser/IgushArray);
 * Java - [StoneT2000/IgushArray-Java](https://github.com/StoneT2000/IgushArray-Java);
-
+* Javascript - [StoneT2000/IgushArray-JS](https://github.com/StoneT2000/IgushArray-JS);
